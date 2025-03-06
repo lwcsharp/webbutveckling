@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Adressering</title>
+    <style>
+      /* Adressering via element namn */
+      body {
+        background-color: lightgray;
+      }
+
+      h1 {
+        color: yellow;
+      }
+
+      h2 {
+        color: lightblue;
+      }
+
+      article {
+        background-color: darkgreen;
+      }
+
+      /* Adressering via id */
+      #main-content {
+        background-color: darkblue;
+        color: lightgray;
+      }
+
+      #main-page-title {
+        color: aliceblue;
+      }
+      /* Adressering via classnamn */
+      .page-title {
+        color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Westcoast Cars</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+        cupiditate!
+      </p>
+    </header>
+    <main>
+      <article id="main-content">
+        <h2>Titel 2</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+          soluta sapiente fugit. Iste molestiae reprehenderit repudiandae
+          similique error reiciendis incidunt distinctio a cum, odit at amet
+          recusandae ab sapiente voluptatem aperiam adipisci, perferendis
+          nostrum fuga voluptatibus quisquam voluptatum! Amet, soluta.
+        </p>
+      </article>
+      <article>
+        <h2 class="page-title">Titel 3</h2>
+        <section>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+            nulla et rem eum nihil, molestias aut repellat ipsam explicabo,
+            reiciendis consectetur totam repellendus voluptatum optio minus
+            laboriosam sequi voluptatibus, illum dolor odio unde ab possimus
+            quasi quod! Dolores, magnam doloribus.
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
