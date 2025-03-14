@@ -18,6 +18,13 @@ main {
   padding: 3rem 2rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,4 +32,33 @@ a {
 .container {
   max-width: 960px;
   margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  background: linear-gradient(
+    0deg,
+    #0d0860 0%,
+    #090979 21%,
+    #0654aa 51%,
+    #00ff71 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .flex-container h1 {
+    font-size: 5rem;
+  }
 }
