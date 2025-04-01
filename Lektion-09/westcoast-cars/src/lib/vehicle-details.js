@@ -1,4 +1,4 @@
-import { get } from './utilities/httpClient.js';
+import { get, remove } from './utilities/httpClient.js';
 
 // Skapar referenser till html element i dokumentet...
 const pageTitle = document.querySelector('.page-title');
@@ -7,9 +7,13 @@ const modelYear = document.querySelector('.info p:first-child');
 const mileage = document.querySelector('.info p:nth-child(2)');
 const price = document.querySelector('.info p:nth-child(3)');
 const description = document.querySelector('.info p:last-child');
+const deleteButton = document.querySelector('#deleteVehicle');
+
+// Global modul variabel
+let vehicleId;
 
 const initApp = () => {
-  const vehicleId = location.search.split('=')[1];
+  vehicleId = location.search.split('=')[1];
   loadVehicle(vehicleId);
 };
 
@@ -23,6 +27,18 @@ const loadVehicle = async (vehicleId) => {
     generateInfo(vehicle);
   } catch (error) {
     console.log('Error information:', error);
+  }
+};
+
+const handleDeleteVehicle = async (e) => {
+  e.preventDefault();
+
+  const returnUrl = `${location.origin}/src/pages/gallery.html`;
+  const result = await remove(`vehicles/${vehicleId}`);
+
+  if (result === 200) {
+    // Vill jag flytta mig till galleriet...
+    location.href = returnUrl;
   }
 };
 
@@ -43,3 +59,4 @@ const generateInfo = (vehicle) => {
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
+deleteButton.addEventListener('click', handleDeleteVehicle);

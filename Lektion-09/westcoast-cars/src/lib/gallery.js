@@ -9,6 +9,7 @@ const initApp = () => {
 const loadVehicles = async () => {
   try {
     const vehicles = await get('vehicles');
+    console.log(vehicles);
     for (let vehicle of vehicles) {
       generateVehicleHtml(vehicle);
     }
