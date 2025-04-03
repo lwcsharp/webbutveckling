@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="module" src="../lib/addVehicle.js"></script>
+    <title>Westcoast Cars | Ny bil</title>
+  </head>
+  <body>
+    <!-- Meny -->
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a href="#">Westcoast Cars</a>
+            </li>
+            <li class="toggle">
+              <input type="checkbox" id="menu-btn" class="menu-btn" />
+              <label for="menu-btn" class="menu-icon">
+                <span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="../index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a class="active" href="./gallery.html">Våra bilar</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Om Oss</a>
+            </li>
+            <li class="menu-item">
+              <a href="#">Kontakta Oss</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="page-title">Lägg till ny bil</h1>
+        <article>
+          <form id="addVehicleForm">
+            <div class="form-controls">
+              <label for="registrationNumber">Registreringsnummer</label>
+              <input
+                type="text"
+                name="registrationNumber"
+                id="registrationNumber" />
+            </div>
+            <div class="form-controls">
+              <label for="manufacturer">Tillverkare</label>
+              <input type="text" name="manufacturer" id="manufacturer" />
+            </div>
+            <div class="form-controls">
+              <label for="model">Modell</label>
+              <input type="text" name="model" id="model" />
+            </div>
+            <div class="form-controls">
+              <label for="modelYear">Årsmodell</label>
+              <input type="text" name="modelYear" id="modelYear" />
+            </div>
+            <div class="form-controls">
+              <label for="imageUrl">Url till bild</label>
+              <input
+                type="text"
+                name="imageUrl"
+                id="imageUrl"
+                value="no-car.png" />
+            </div>
+            <div class="form-controls">
+              <label for="mileage">Antal km</label>
+              <input type="text" name="mileage" id="mileage" />
+            </div>
+            <div class="form-controls">
+              <label for="value">Värde</label>
+              <input type="text" name="value" id="value" />
+            </div>
+            <div class="form-controls">
+              <label for="description">Beskrivning</label>
+              <textarea name="description" id="description"></textarea>
+            </div>
+            <div class="btn-container"><button class="btn">Spara</button></div>
+          </form>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
