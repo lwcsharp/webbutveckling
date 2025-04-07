@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/site.css" />
+    <link rel="stylesheet" href="./shows.css" />
     <script
       src="https://kit.fontawesome.com/55174c58a9.js"
       crossorigin="anonymous"></script>
-    <script type="module" src="../lib/shows.js"></script>
+    <script type="module" src="./shows.js"></script>
     <title>MovieFlix | Serier</title>
   </head>
   <body>
     <header>
       <div class="container">
-        <div class="logo"><a href="../index.html">MovieFlix</a></div>
+        <div class="logo"><a href="../../index.html">MovieFlix</a></div>
         <nav>
           <ul>
             <li>
-              <a href="./movies.html">Filmer</a>
+              <a href="../movies/movies.html">Filmer</a>
             </li>
             <li>
               <a class="active" href="./shows.html">TV</a>
@@ -38,8 +38,9 @@
             <i class="fa-regular fa-magnifying-glass"></i>
           </div>
         </form>
-        <div id="message"></div>
+
         <h2>Populära TV serier</h2>
+
         <section class="pagination">
           <div>
             <span class="navigation-btn" id="gotoFirst"
@@ -58,7 +59,7 @@
             ></span>
           </div>
         </section>
-        <div id="top-series" class="grid">
+        <div id="top-shows" class="grid">
           <!-- TV-Shows here... -->
         </div>
       </section>
