@@ -17,3 +17,19 @@ export const get = async (endpoint) => {
     console.error(error);
   }
 };
+
+export const search = async (endpoint, searchCriteria) => {
+  const url = `${config.apiUrl}/search/${endpoint}?api_key=${config.apiKey}&query=${searchCriteria}`;
+
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      return await response.json();
+    }
+    else {
+      throw new Error(`sumting wrong ${response.ok}, ${respone.statusText}`)
+    }
+  } catch (error) {
+    console.error(error);
+  };
+};

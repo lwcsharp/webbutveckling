@@ -1,4 +1,4 @@
 export const config = {
   apiUrl: 'https://api.themoviedb.org/3',
-  apiKey: '4b34d17d76d66a06e48261725b1433f7',
+  apiKey: '3cc29cf8f5a3a8a7ca04ac311aedd2d8'
 };
