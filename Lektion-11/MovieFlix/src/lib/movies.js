@@ -2,22 +2,30 @@ import * as http from './helpers/httpClient.js';
 
 const searchForm = document.querySelector("#searchForm");
 
+const movieList = document.querySelector('#top-movies');
+
 const initApp = async () => {
   loadMovies();
 };
 
 const loadMovies = async () => {
   const data = await http.get('discover/movie');
-  console.log("Response data", data);
-
   data.results.forEach(movie => {
-    let html =
-      `<section class="card">
+    movieList.appendChild(createHtml(movie));
+  });
+  // createHtml(data.results);
+};
+
+const createHtml = (movie) => {
+  const display = document.createElement('div');
+  // movies.forEach(movie => {
+
+  let html =
+    `<section class="card">
         <a href="./movie-details.html?id=${movie.id}">
-          ${
-            movie.poster_path ? `<img src="https://image.tmdb.org/t/p/w500$%7Bmovie.poster_path%7D" alt="${movie.title}" />`
-              : `<img src="../assets/images/No-Image.jpg" alt="${movie.title}" />`
-          }
+          ${movie.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />`
+      : `<img src="../assets/images/No-Image.jpg" alt="${movie.title}" />`
+    }
         </a>
         <div class="card-body">
           <h5 class="card-title">${movie.title}</h5>
@@ -27,9 +35,15 @@ const loadMovies = async () => {
         </div>
       </section>` ;
 
-    document.querySelector('#top-movies').innerHTML += html;
-  });
-};
+  display.innerHTML = html;
+  return display;
+  // document.querySelector('#top-movies').innerHTML += html;
+  // });
+}
+
+const clear = () => {
+  movieList.innerHTML = "";
+}
 
 const handleSearch = async (e) => {
   e.preventDefault();
@@ -43,8 +57,13 @@ const handleSearch = async (e) => {
   }
 
   const data = await http.search('movie', searchValue);
-  console.log(data);
 
+  clear();
+  data.results.forEach(movie => {
+    movieList.appendChild(createHtml(movie));
+  });
+  console.log(data);
+  createHtml(data.results);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
