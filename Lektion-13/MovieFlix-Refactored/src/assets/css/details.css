@@ -1,0 +1,55 @@
+@import './site.css';
+
+.logo a {
+  display: block;
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+
+.details-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+
+.details-top img {
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-top p {
+  margin: 1.25rem 0;
+}
+
+.details-top .info {
+  width: 100%;
+}
+
+.details-top .rating {
+  color: #e65100;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.3;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .details-top {
+    flex-direction: row;
+  }
+}

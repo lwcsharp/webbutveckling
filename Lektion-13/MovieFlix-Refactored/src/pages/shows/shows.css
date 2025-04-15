@@ -1,0 +1,12 @@
+@import '../../assets/css/site.css';
+@import '../../assets/css/navigation.css';
+@import '../../assets/css/card.css';
+@import '../../assets/css/utilities.css';
+
+.card {
+  background: #f48f02;
+}
+
+.card:hover {
+  background: #f7a83a;
+}
