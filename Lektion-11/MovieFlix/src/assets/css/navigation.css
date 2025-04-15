@@ -1,0 +1,41 @@
+header {
+  position: sticky;
+  top: 0;
+  padding: 1.25rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+header .logo a {
+  color: #ff0000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  margin-left: 1.25rem;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+}
+header nav ul li a:hover {
+  color: #e65100;
+  font-weight: 500;
+  border-bottom: solid 1px #e65100;
+}
+header nav ul li a.active {
+  color: #e65100;
+  border-bottom: solid 1px #e65100;
+  font-weight: 400;
+}
+

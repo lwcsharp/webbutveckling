@@ -1,7 +1,6 @@
-import * as http from './helpers/httpClient.js';
+import * as http from '../../lib/helpers/httpClient.js';
 
 const searchForm = document.querySelector("#searchForm");
-
 const movieList = document.querySelector('#top-movies');
 
 const initApp = async () => {
@@ -23,8 +22,9 @@ const createHtml = (movie) => {
   let html =
     `<section class="card">
         <a href="./movie-details.html?id=${movie.id}">
-          ${movie.poster_path ? `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />`
-      : `<img src="../assets/images/No-Image.jpg" alt="${movie.title}" />`
+          ${movie.poster_path ? 
+          `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />`: 
+          `<img src="../../assets/images/No-Image.jpg" alt="${movie.title}" />` 
     }
         </a>
         <div class="card-body">

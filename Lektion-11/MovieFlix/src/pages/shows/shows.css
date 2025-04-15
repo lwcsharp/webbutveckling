@@ -1,0 +1,6 @@
+@import '../../assets/css/site.css';
+@import '../../assets/css/card.css';
+
+.card{
+  background: rgb(248, 212, 146);
+}
