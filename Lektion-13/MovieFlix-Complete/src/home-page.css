@@ -1,0 +1,42 @@
+@import './assets/css/site.css';
+@import './assets/css/navigation.css';
+@import './assets/css/utilities.css';
+
+.page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: url('./assets/images/movieflix_background.jpg') no-repeat
+    center/cover;
+  z-index: -1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.page h1 {
+  font-size: 6rem;
+  color: #ff0000;
+}
+
+.page h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.page p {
+  padding: 1rem 0;
+}
+
+.page-title {
+  color: #f4f4f4;
+  font-size: 4rem;
+  font-weight: 700;
+}
