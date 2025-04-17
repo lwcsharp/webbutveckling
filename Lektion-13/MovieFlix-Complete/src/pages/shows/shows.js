@@ -9,6 +9,7 @@ const pagination = document.querySelectorAll('.pagination-btn');
 // Global fil variabel...
 let searchValue = undefined;
 const initApp = () => {
+  location.search.split('=');
   pagination.forEach((page) => page.addEventListener('click', moveToPage));
   loadShows();
 };
@@ -74,6 +75,7 @@ const handleSearch = async (e) => {
 
   if (searchValue.trim() === '') {
     searchValue = undefined;
+    localStorage.removeItem('query');
   }
 
   loadShows();
