@@ -1,0 +1,14 @@
+{
+  "name": "westcoast-cars",
+  "version": "1.0.0",
+  "description": "Enkel demo för introduktion till HTML, CSS och JavaScript",
+  "main": "gallery.js",
+  "scripts": {
+    "server": "npx json-server vehicles.json"
+  },
+  "author": "Michael Gustavsson",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
