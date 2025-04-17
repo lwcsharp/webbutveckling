@@ -14,11 +14,7 @@ render(data){
 }
 
   _generateHtml() {
-    return `<h1 class="page-title">
-    ${this._data.manufacturer}
-    ${this._data.model}
-    </h1>
-
+    return `<h1 class="page-title">${this._data.manufacturer} ${this._data.model}</h1>
     <article class="details">
       <section>
        <img src= "../../images/${this._data.imageUrl}"/>
