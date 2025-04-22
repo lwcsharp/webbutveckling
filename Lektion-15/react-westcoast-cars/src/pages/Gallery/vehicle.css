@@ -1,0 +1,29 @@
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: solid 1px var(--text-color);
+  background: var(--secondary-color);
+  padding: 1.2rem 0;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.vehicle-details img {
+  max-width: 80%;
+  border: solid 1px var(--text-color);
+  background: var(--dark-color);
+  padding: 0.2rem;
+}
+
+.vehicle-details .info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.vehicle-details .info p span {
+  color: yellow;
+}

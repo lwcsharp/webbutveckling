@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import PageTitle from '../../components/PageTitle';
 import Card from '../../components/Card';
 
+import './gallery.css';
+
 const GalleryPage = () => {
   // Logik
   const [vehicles, setVehicles] = useState([]);
@@ -20,8 +22,12 @@ const GalleryPage = () => {
   return (
     <>
       <PageTitle title='Våra bilar!!!' />
-      {vehicles &&
-        vehicles.map((vehicle) => <Card key={vehicle.id} vehicle={vehicle} />)}
+      <ul className='grid-list'>
+        {vehicles &&
+          vehicles.map((vehicle) => (
+            <Card key={vehicle.id} vehicle={vehicle} />
+          ))}
+      </ul>
     </>
   );
 };
