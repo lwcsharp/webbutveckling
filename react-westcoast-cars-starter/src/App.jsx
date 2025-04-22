@@ -1,5 +1,12 @@
+import GalleryPage from "./pages/Gallery/Gallery";
+
+// const App = () => {}, samma som nedan
 function App() {
-  return <div>App</div>;
-}
+  return (
+    <>
+      <GalleryPage />
+    </>
+  );
+};
 
 export default App;
